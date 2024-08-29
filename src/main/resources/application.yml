@@ -1,19 +1,8 @@
-#server:
-#  port: 443
-#  ssl:
-#    enabled: true
-#    key-store: classpath:fridge_chef_https.p12
-#    key-store-password: ENC(Y1ue+5WaK7KgkCEKAqBAHM61xkcZeEHX)
-#    key-store-type: PKCS12
-#    key-alias: localhost
 
-jasypt:
-  encryptor:
-    password: ${JASYPT_PASSWORD}
-    bean: jasyptStringEncryptor
 spring:
-  profiles:
-    default: local
+  config:
+    activate:
+      on-profile: local,dev,prod
   output:
     ansi:
       enabled: always
