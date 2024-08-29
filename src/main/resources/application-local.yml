@@ -1,0 +1,18 @@
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  output:
+    ansi:
+      enabled: always
+
+
+logging:
+  level:
+    org.springframework.core.env.PropertySourcesPropertyResolver: DEBUG
+    org:
+      springframework:
+        core:
+          env:
+            PropertySourcesPropertyResolver: DEBUG
